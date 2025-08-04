@@ -4,7 +4,7 @@ repository for kubernetes workloads healthcheck  <br>
 To Do: kubeconfig should be completed  <br>
 
 ## aks_health_check.sh
-health script for AWS EKS
+health check script for AWS EKS
 
 ## k8s_health_check.sh
-health script for Local Kubernetes Cluster
+health check script for Local Kubernetes Cluster
