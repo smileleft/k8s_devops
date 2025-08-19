@@ -98,3 +98,16 @@ spec:
     - --disable-admission-plugins=DefaultStorageClass # <-- here!
 ```
 
+## Persistent Volume Claim
+
+```
+# Delete the existing PVC named myclaim
+kubectl delete pvc myclaim
+
+# Reapply the same manifest
+kubectl apply -f myclaim.yaml
+
+# Check the status of the PVC
+kubectl get pvc myclaim
+```
+
