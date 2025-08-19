@@ -9,3 +9,9 @@
 # Deployment Image: kodekloud/webapp-color:v2
 kubectl set image deployment/frontend simple-webapp=kodekloud/webapp-color:v2
 ```
+
+## Change Deployment Type
+```
+kubectl patch deployment frontend -p \
+'{"spec":{"strategy":{"type":"Recreate", "rollingUpdate": null}}}'
+```
