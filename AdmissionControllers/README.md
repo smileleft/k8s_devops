@@ -46,3 +46,5 @@ spec:
     - --tls-private-key-file=/etc/kubernetes/pki/apiserver.key
     .....
 ```
+
+# NamespaceLifecycle
