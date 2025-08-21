@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-color
+  labels:
+    app: webapp-color
+spec:
+  containers:
+  - name: webapp-container
+    image: smileleft/webapp
+    env:
+    - name: "APP_COLOR"
+      value: "green"
