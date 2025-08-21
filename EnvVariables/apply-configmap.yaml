@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-color
+  labels:
+    app: webapp-color
+spec:
+  containers:
+  - name: webapp-container
+    image: kodecloud/webapp
+    env:
+    - name: "APP_COLOR"
+      valueFrom:
+        configMapKeyRef:
+          # Name of the ConfigMap
+          name: webapp-config-map
+          # Key to retrieve the value from
+          key: APP_COLOR
