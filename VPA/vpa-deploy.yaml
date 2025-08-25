@@ -1,0 +1,20 @@
+    apiVersion: autoscaling.k8s.io/v1
+    kind: VerticalPodAutoscaler
+    metadata:
+      name: my-app-vpa
+    spec:
+      targetRef:
+        apiVersion: "apps/v1"
+        kind: Deployment
+        name: my-app-deployment # Replace with the name of your target Deployment
+      updatePolicy:
+        updateMode: "Auto" # Or "Off", "Initial", "Recreate"
+      resourcePolicy:
+        containerPolicies:
+        - containerName: "*" # Apply to all containers in the pod
+          minAllowed:
+            cpu: 100m
+            memory: 50Mi
+          maxAllowed:
+            cpu: 2
+            memory: 4Gi
