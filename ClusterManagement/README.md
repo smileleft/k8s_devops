@@ -17,6 +17,12 @@ kubeadm upgrade apply --dry-run {trying version}
 ## Controlplane Upgrade
 
 ```
+# cordon
+kubectl cordon controlplane
+
+# drain
+kubectl drain controlplane --ignore-daemonsets --delete_emptydir-data
+
 # upgrade kubeadm
 sudo apt-mark unhold kubeadm && \
 sudo apt-get update && \
@@ -42,4 +48,29 @@ sudo systemctl restart kubelet
 # Verify
 kubectl get nodes
 kubectl version
+```
+
+## Worker Node
+
+```
+# cordon
+kubectl cordon {node name}
+
+# drain
+kubectl drain {node name} --ignore-daemonsets --delete_emptydir-data
+
+# Connect worker node
+ssh {your id}@{node ip}
+
+# update kubelet, kubectl
+sudo apt-mark unhold kubelet kubectl
+sudo apt-get install -y kubelet=1.33.0-1.1 kubectl=1.33.0-1.1
+sudo apt-mark hold kubelet kubectl
+
+# restart kubelet
+sudo systemctl restart kubelet
+exit
+
+# uncordon
+kubectl uncordon {node name}
 ```
