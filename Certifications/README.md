@@ -9,3 +9,8 @@ cat /etc/kubernetes/manifests/kube-apiserver.yaml
 ```
 openssl x509 -in {file-path}.crt -text -noout
 ```
+
+## kube-api server stop, How to check kube-api server container
+```
+crictl ps -a
+```
