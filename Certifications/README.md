@@ -4,3 +4,8 @@
 ```
 cat /etc/kubernetes/manifests/kube-apiserver.yaml
 ```
+
+## how to list cerficates info
+```
+openssl x509 -in {file-path}.crt -text -noout
+```
