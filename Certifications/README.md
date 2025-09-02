@@ -19,3 +19,8 @@ crictl ps -a
 ```
  kubectl certificate approve {Name of CSR}
 ```
+
+## Reject(Deny) CertificateSigningRequest(CSR)
+```
+kubectl certificate deny {Name of CSR}
+```
