@@ -14,3 +14,8 @@ openssl x509 -in {file-path}.crt -text -noout
 ```
 crictl ps -a
 ```
+
+## approve CertificateSigningRequest(CSR)
+```
+ kubectl certificate approve {Name of CSR}
+```
