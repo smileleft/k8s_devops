@@ -1,5 +1,6 @@
 # k8s_devops
 repository for kubernetes workloads healthcheck  <br>
+And kubectl commands for manage k8s cluster
   
 To Do: kubeconfig should be completed  <br>
 
