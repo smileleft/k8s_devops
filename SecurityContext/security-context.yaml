@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-pod
+spec:
+  securityContext:
+    runAsUser: 1000          # UID inside container
+    runAsGroup: 3000         # GID inside container
+    fsGroup: 2000            # Group that owns mounted volumes
+  containers:
+  - name: demo
+    image: nginx
