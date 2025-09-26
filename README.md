@@ -14,3 +14,8 @@ health check script for Local Kubernetes Cluster
 ```
 kubectl get { resource name (nodes, pods, roles, ...) } --all-namespaces
 ```
+
+## Get Logs from the inside of pod
+```
+kubectl exec {pod name} -- cat {log file path}
+```
