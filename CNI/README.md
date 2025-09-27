@@ -20,3 +20,9 @@ kubectl delete configmap kube-flannel-cfg -n kube-flannel
 sudo rm -rf /etc/cni/net.d/10-flannel.conflist
 ```
 
+## How to install Calico CNI
+
+```
+https://docs.tigera.io/calico/latest/getting-started/kubernetes/quickstart
+# you need to configure your own IP info on custom resource definition file
+```
