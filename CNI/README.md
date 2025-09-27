@@ -5,3 +5,9 @@
 ```
 ls /etc/cni/net.d
 ```
+
+## delete config map for flannel
+```
+kubectl delete configmap kube-flannel-cfg -n kube-flannel
+```
+
