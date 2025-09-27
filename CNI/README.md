@@ -11,3 +11,8 @@ ls /etc/cni/net.d
 kubectl delete configmap kube-flannel-cfg -n kube-flannel
 ```
 
+## delete config file for flannel
+```
+sudo rm -rf /etc/cni/net.d/10-flannel.conflist
+```
+
